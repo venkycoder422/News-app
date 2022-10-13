@@ -1,4 +1,3 @@
-<php?
-include('Homepage.html')
-
-<?
+<?php
+include('Homepage.html');
+?>
