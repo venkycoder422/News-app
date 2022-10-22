@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News app</title>
-</head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.js"> -->
+
+  </head>
+
 <style>
 body{
   background-color: #f0f8ff	;
@@ -60,6 +63,9 @@ p{
     font-size: 20px;
 }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <body>
     <div id="tittle"><h2> News App<h2></div>
     <div id="container"></div>
@@ -83,15 +89,13 @@ url: "https://www.wired.com/story/how-to-set-up-lock-screens-all-devices/"
             
         try{
 
-            let out=await fetch(url, {
-              mode: 'cors',
-              headers:{
-                'Access-Control-Allow-Origin':'*'
-              }
-            });
-            let data=await out.json();
+            let data=await axios({
+  method: 'get',
+  url: url,
+  // responseType: 'stream'
+}) 
             console.log(data);
-            displayData(data);
+            displayData(data.data);
         }catch(err){
             console.log(err);
         }
