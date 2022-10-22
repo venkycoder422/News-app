@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    margin-top: 5%;
+    margin-top: 7%;
     margin-left: 5%;
     margin-right: 5%;
 
@@ -58,21 +58,19 @@
     color: rgba(27, 29, 29, 0.763);
     background-color: transparent;
     width: 100%;
-    background-color: #f0f8ff;
-    height: 10%;
-    align-items: center;
-    
+    background-color: #c8cdd1;
+  
   }
 
-  /* #tittle>h2 {
-    margin-top: -14px;
-  } */
+#tittle h2{
+  margin:0%;
+}
   #tittle input {
     height: 40px;
     /* width: 142%; */
     width: 400px;
-    margin-bottom: 40px;
     border-radius: 10px;
+    margin: 0%;
   }
   input:focus{
     outline-color: #d00ede;
@@ -89,8 +87,8 @@
 
 <body>
   <div id="tittle">
+    <div><h2> News App<h2></h2></div>
     
-    <h2> News App<h2>
       <div>
         <input type="search" id='SearchBox' placeholder="Search" oninput="debounce(main,1000)"/>
       </div>
