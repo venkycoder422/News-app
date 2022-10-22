@@ -1,7 +1,7 @@
 # News App
 News App is used to see top headlines in the world.
 
-<img src=""C:\Users\swfn0\OneDrive\Pictures\Screenshots\Screenshot (310).png"" width="600" height="200">
+<img src="C:\Users\swfn0\OneDrive\Pictures\Screenshots\Screenshot (310).png" " width="600" height="200">
 
 
 
