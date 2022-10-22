@@ -52,17 +52,32 @@
   #tittle {
     text-align: center;
     font-size: 50px;
+    display: flex;
+    justify-content: space-evenly;
     position: fixed;
     color: rgba(27, 29, 29, 0.763);
     background-color: transparent;
     width: 100%;
     background-color: #f0f8ff;
     height: 10%;
+    align-items: center;
+    
   }
 
-  #tittle>h2 {
+  /* #tittle>h2 {
     margin-top: -14px;
+  } */
+  #tittle input {
+    height: 40px;
+    /* width: 142%; */
+    width: 400px;
+    margin-bottom: 40px;
+    border-radius: 10px;
   }
+  input:focus{
+    outline-color: #d00ede;
+  }
+
 
   p {
     font-size: 20px;
@@ -74,47 +89,15 @@
 
 <body>
   <div id="tittle">
+    
     <h2> News App<h2>
+      <div>
+        <input type="search" id='SearchBox' placeholder="Search" oninput="debounce(main,1000)"/>
+      </div>
   </div>
   <div id="container"></div>
-  <script>
-    let container = document.getElementById("container");
-    let api_key = `0a952470a1177aa6f7c53b4ff809b1f1`;
-    let url = `https://gnews.io/api/v4/top-headlines?token=${api_key}`;
-    async function getData(data) {
-
-      try {
-
-        let data = await axios({
-          method: 'get',
-          url: url,
-          // responseType: 'stream'
-        })
-        console.log(data);
-        displayData(data.data);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    getData();
-
-    function displayData(data) {
-      var arr = data.articles;
-      arr.forEach(function (article) {
-
-        let newsitems = document.createElement("div");
-
-        let img = document.createElement("img");
-        img.src = article.image;
-        let title = document.createElement("h4");
-        title.textContent = article.title;
-        let author = document.createElement("p");
-        author.textContent = article.author;
-
-        newsitems.append(img, author, title);
-        container.append(newsitems);
-      });
-    }
+  <script src="/script.js">
+   
   </script>
 </body>
 
