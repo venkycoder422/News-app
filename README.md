@@ -3,7 +3,7 @@ News App is used to see top headlines in the world.
 
 <img src="https://user-images.githubusercontent.com/76251822/197336913-b3f6589f-1133-41c6-885a-fec34927d022.png" width="1000" height="300"></img>
 
-## [Demo Link :-](https://newsapp-venkycoder422.vercel.app/)
+## [Demo Link :-](https://news-app22.vercel.app/)
 
 ## Installation and Run Locally
 Install-project with git
