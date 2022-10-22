@@ -83,7 +83,12 @@ url: "https://www.wired.com/story/how-to-set-up-lock-screens-all-devices/"
             
         try{
 
-            let out=await fetch(url);
+            let out=await fetch(url, {
+              mode: 'cors',
+              headers:{
+                'Access-Control-Allow-Origin':'*'
+              }
+            });
             let data=await out.json();
             console.log(data);
             displayData(data);
