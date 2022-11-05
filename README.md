@@ -1,3 +1,13 @@
+## Tech Stacks
+- CSS
+- HTML
+- Java Script
+- Axios
+
+## Features
+- API request using axios.
+- Search feature
+
 # News App
 News App is used to see top headlines in the world.
 
@@ -14,14 +24,7 @@ $ git clone https://github.com/venkycoder422/News-app.git
 
 ### `Run index.html or Go live Server`
 
-## Features
-- API request using axios.
-- Search feature
-## Authors
+
+## Author
 
 - [Venkatesulu](https://github.com/venkycoder422)
-## Tech Stacks
-- CSS
-- HTML
-- Java Script
-- Axios
